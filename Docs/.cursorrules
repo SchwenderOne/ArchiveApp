@@ -1,0 +1,18 @@
+- Nutze MVVM-Architektur mit sauberer Trennung
+- Schreibe nur SwiftUI-Code (kein UIKit, kein Combine, es sei denn explizit gewünscht)
+- Schreibe modularen, kommentierten Code, verständlich auch für Anfänger
+- Vermeide magische Zahlen, verwende enums & constants
+- Verwende moderne Swift 5.9 Features
+- Bevorzuge SF Symbols für Icons
+- Stelle sicher, dass alle Views in Previews dargestellt werden können
+- Baue auf Erweiterbarkeit (z. B. Platzhalter für zukünftige Features)
+
+- Nutze MVVM-Architektur mit sauberer Trennung
+- Verwende ausschließlich SwiftUI, kein UIKit oder Combine (außer wenn explizit gefordert)
+- Schreibe modularen, testbaren und kommentierten Code, verständlich auch für Anfänger
+- Erkläre in Kommentaren oder extra Abschnitten, wie Dateien miteinander verbunden sind
+- Verwende moderne Swift 5.9 Features
+- Nutze ViewModifiers und SF Symbols sinnvoll
+- Achte auf sauberes UI-Design mit gutem Layout und Wiederverwendbarkeit
+- Kein hartercoded Layout! Verwende flexible, adaptive Layouts (z.B. GeometryReader, Spacer etc.)
+- Alle Views sollten `PreviewProvider` haben

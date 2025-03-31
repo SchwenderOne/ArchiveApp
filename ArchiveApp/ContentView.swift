@@ -8,14 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            HomeView()
+                .tabItem {
+                    Label("Übersicht", systemImage: "folder")
+                }
+                .tag(0)
+            
+            SearchView()
+                .tabItem {
+                    Label("Suche", systemImage: "magnifyingglass")
+                }
+                .tag(1)
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profil", systemImage: "person")
+                }
+                .tag(2)
         }
-        .padding()
+        .accentColor(.customPrimary) // Verwende unsere neue Primärfarbe
+        .onAppear {
+            // Passe das Erscheinungsbild der Tab-Leiste an
+            let appearance = UITabBarAppearance()
+            appearance.configureWithDefaultBackground()
+            
+            UITabBar.appearance().standardAppearance = appearance
+            if #available(iOS 15.0, *) {
+                UITabBar.appearance().scrollEdgeAppearance = appearance
+            }
+        }
     }
 }
 
